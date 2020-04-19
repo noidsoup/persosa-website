@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import App from "../components/App"
 /* import Image from "../components/image" */
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,13 +15,13 @@ const BlogPost = ({node}) => {
 }
 
 const IndexPage = ({data}) => (
-  <Layout>
+  <App>
     <SEO title="Home" />
     <ul>
       {data.allContentfulBlog.edges.map((edge) => <BlogPost key={edge.node.title}  node={edge.node} />)}
     </ul>
     <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  </App>
 )
 
 export default IndexPage

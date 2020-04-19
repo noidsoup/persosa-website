@@ -1,5 +1,5 @@
 /**
- * Layout component that queries for data
+ * App component that queries for data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
@@ -10,9 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.scss"
+import "./App.scss"
 
-const Layout = ({ children }) => {
+const App = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -35,17 +35,17 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+{/*           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a> */}
         </footer>
       </div>
     </>
   )
 }
 
-Layout.propTypes = {
+App.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default App
