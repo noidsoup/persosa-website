@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import App from "../components/App"
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import SEO from "../components/Seo"
+import SEO from "../components/seo"
 
 const SecondPage = () => (
   <App>
