@@ -1,7 +1,7 @@
 import React from "react"
 
 import App from "../components/App"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 
 const NotFoundPage = () => (
   <App>

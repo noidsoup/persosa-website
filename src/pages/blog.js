@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 import App from "../components/App";
 import Navigation from "../components/Navigation";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
 const BlogPost = ({node}) => {
   return (

@@ -5,7 +5,7 @@ import App from "../components/App";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const IndexPage = () => (

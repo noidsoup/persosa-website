@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 
 class BlogPost extends Component {
   render() {
