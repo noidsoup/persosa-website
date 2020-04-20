@@ -1,42 +1,27 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import App from "../components/App"
-/* import Image from "../components/image" */
-import SEO from "../components/seo"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import App from "../components/App";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 
-const BlogPost = ({node}) => {
-  return (
-    <li>
-      <Link to={node.slug}>{node.title}</Link>
-    </li>
-  )
-}
+import SEO from "../components/seo";
+import "bootstrap/dist/css/bootstrap.min.css"
 
-const IndexPage = ({data}) => (
+const IndexPage = () => (
   <App>
     <SEO title="Home" />
-    <ul>
-      {data.allContentfulBlog.edges.map((edge) => <BlogPost key={edge.node.title}  node={edge.node} />)}
-    </ul>
-    <Link to="/page-2/">Go to page 2</Link>
+    <CTA>
+      <h2>Persosa</h2>
+      <p>Connecting TV and Digital Experiences</p>
+      <p>
+        Monetize all consumer touchpoints by connecting consumer experiences and
+        the underlying data.
+      </p>
+    </CTA>
+    <Link to="/blog/">Blog</Link>
+    <Footer />
   </App>
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query pageQuery {
-    allContentfulBlog (filter: {
-      node_locale: {eq: "en-US"}
-    }) {
-      edges {
-        node {
-          title
-          slug
-        }
-      }
-    }
-  }
-`
